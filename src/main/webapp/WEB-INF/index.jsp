@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,10 +10,10 @@
 </head>
 <body>
 	<div id="container" style="height:70%;width:70%;margin:15%; padding:5px;" class="border border-solid d-flex flex-column">
-		<form action="/results" method="POST">
+		<form action="/results" method="post">
 			<p>Your Name: <input type="text" name="name"></p>
 			<p>Dojo Location: 
-				<select>
+				<select name="location">
 					<option selected>Choose Location</option>
 					<option value="San Jose">San Jose</option>
 					<option value="Chicago">Chicago</option>
@@ -22,7 +22,7 @@
 				</select>
 			</p>
 			<p>Favorite Language:
-				<select>
+				<select name="langage">
 					<option selected>Choose Language</option>
 					<option value="C++">C++</option>
 					<option value="C#">C#</option>
@@ -31,9 +31,9 @@
 				</select>
 			</p>
 			<p>Comment (optional):
-				<textarea rows="5" cols="40"></textarea>
+				<textarea rows="5" cols="40" name="comment"></textarea>
 			</p>
-			<p><input type="submit" value="Submit"></p>
+			<p><button class="btn btn-primary">Submit</button></p>
 		</form>
 	</div>
 </body>
