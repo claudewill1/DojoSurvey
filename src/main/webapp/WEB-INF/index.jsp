@@ -22,7 +22,7 @@
 				</select>
 			</p>
 			<p>Favorite Language:
-				<select name="langage">
+				<select name="language">
 					<option selected>Choose Language</option>
 					<option value="C++">C++</option>
 					<option value="C#">C#</option>

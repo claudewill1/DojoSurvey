@@ -21,7 +21,7 @@ public class HomeController {
 	public String results(
 			@RequestParam("name") String name,
 			@RequestParam("location") String location,
-			@RequestParam("program") String language,
+			@RequestParam("language") String language,
 			@RequestParam("comment") String comment,
 			HttpSession session) {
 		session.setAttribute("name",name);
@@ -31,7 +31,7 @@ public class HomeController {
 		System.out.println("made it to this method");
 		return "redirect:/results";
 	}
-	@GetMapping("/result")
+	@GetMapping("/results")
 	public String result() {
 		return "result.jsp";
 	}
